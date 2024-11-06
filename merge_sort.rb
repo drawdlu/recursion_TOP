@@ -18,13 +18,15 @@ def merge(left_arr, right_arr)
 
     left_digit = left_arr.first
     right_digit = right_arr.first
-    if left_digit < right_digit
-      aux_arr << left_digit
-      left_arr.delete(left_digit)
-    else
-      aux_arr << right_digit
-      right_arr.delete(right_digit)
-    end
+
+    smaller, arr = if left_digit < right_digit
+                     [left_digit, left_arr]
+                   else
+                     [right_digit, right_arr]
+                   end
+
+    aux_arr << smaller
+    arr.delete(smaller)
   end
 
   aux_arr
