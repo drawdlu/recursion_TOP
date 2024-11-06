@@ -1,7 +1,7 @@
 LARGE_NUM = 600_851_475_143
 
 def prime_factors(number, prime_arr = [], smallest = 2)
-  return prime_arr if number == 1
+  return prime_arr.sort if number == 1
 
   if (number % smallest).zero?
     prime_arr << smallest
@@ -34,12 +34,12 @@ def factors(number)
     end
   end
 
-  (prime_factors + other_factors).uniq
+  (prime_factors + other_factors).sort.uniq
 end
 
-p prime_factors(LARGE_NUM)[-1]
+# p prime_factors(LARGE_NUM)[-1]
 # 6857
 
-p factors(LARGE_NUM)
+# p factors(LARGE_NUM)
 # [71, 839, 1471, 6857, 87625999, 408464633, 716151937, 8462696833,
 # 59569, 104441, 486847, 1234169, 5753023, 10086647]
