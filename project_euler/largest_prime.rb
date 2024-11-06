@@ -34,7 +34,7 @@ def factors(number)
     end
   end
 
-  prime_factors + other_factors
+  (prime_factors + other_factors).uniq
 end
 
 p prime_factors(LARGE_NUM)[-1]

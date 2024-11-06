@@ -7,5 +7,3 @@ def palindrome?(string)
 
   palindrome?(string[1..-2])
 end
-
-p palindrome?('9090')
