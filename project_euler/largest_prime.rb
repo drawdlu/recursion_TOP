@@ -1,7 +1,7 @@
 LARGE_NUM = 600_851_475_143
 
 def prime_factors(number, prime_arr = [], smallest = 2)
-  return prime_arr.sort if number == 1
+  return (prime_arr + [1]).sort if number == 1
 
   if (number % smallest).zero?
     prime_arr << smallest
