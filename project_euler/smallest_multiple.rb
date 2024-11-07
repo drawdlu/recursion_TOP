@@ -9,6 +9,7 @@ def smallest_multiple(first_digit, second_digit = first_digit - 1)
 
   second_digit = smallest_multiple(second_digit, second_digit - 1)
 
+  # LCM Formula
   (first_digit * second_digit) / gcd(first_digit, second_digit)
 end
 
